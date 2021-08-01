@@ -37,7 +37,7 @@ var svg = d3.select("#total_cases_map")
 svg.call(tip);
 
 
-d3.csv("../data/us-states-live.csv", function (data) {
+d3.csv("data/us-states-live.csv", function (data) {
     var state_data = [];
     for (var d = 0; d < data.length; d++) {
         state_data.push(parseFloat(data[d].cases))
