@@ -165,8 +165,8 @@ function draw_graph(data) {
         var x0 = x.invert(d3.mouse(this)[0]),
             i = bisectDate(data, x0, 1),
             date0 = data[i - 1],
-            date1 = data[i],
-            d = x0 - date0.date > date1.date - x0 ? date1 : date0;
+            date1 = data[i];
+        var d = x0 - date0.date > date1.date - x0 ? date1 : date0;
         tooltip.attr("transform", "translate(" + x(d.date) + "," + y(d.cases_avg) + ")");
         tooltip.select(".tooltip-date").text(parse_date(d.date));
         tooltip.select(".tooltip-cases").text(formatNumber(Math.round(d.cases_avg)));
