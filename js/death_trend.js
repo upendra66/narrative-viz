@@ -37,7 +37,7 @@ async function init_data(data_file) {
     await d3.csv(data_file, function (d) {
         if (data_file == "data/us.csv") {
             usa_data = parse_data(d);
-            if(url_state_name == null){
+            if(url_state_name == null || url_state_name == "All"){
                 draw_graph(usa_data);
             }
             
