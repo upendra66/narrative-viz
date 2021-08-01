@@ -43,7 +43,7 @@ async function init_data(data_file) {
             
         } else {
             states_data = parse_data(d);
-            if(url_state_name != null){
+            if(url_state_name != null && url_state_name != "All"){
                 
                 ele.value = url_state_name;
                 onStateChange(url_state_name);
